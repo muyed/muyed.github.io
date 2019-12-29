@@ -24,11 +24,13 @@ deploy:
     local-dir: public
     target-branch:
       master
-  - provider: pages
-    skip-cleanup: true
-    github-token: $CO_TOKEN
-    keep-history: true
+  - provider: script
+    script:
+      - cd ./public
+      - rm -rf .git
+      - git init
+      - git add .
+      - git commit -m 'travis'
+      - git push --force --quiet "https://dt_ktQOhtD:$CO_TOKEN@git.coding.net/b_fatty/hexo.git" master:master
     on:
       branch: source
-    local-dir: public
-    target-branch: master
