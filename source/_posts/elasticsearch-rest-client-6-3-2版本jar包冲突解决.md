@@ -64,4 +64,4 @@ java.lang.NoSuchMethodError: org.elasticsearch.client.Request.<init>(Ljava/lang/
         </dependency>
 ```
 
-再次启动程序操作es，程序运行正常，对es操作成功!
+再次启动程序操作es，程序运行正常，对es操作成功。
