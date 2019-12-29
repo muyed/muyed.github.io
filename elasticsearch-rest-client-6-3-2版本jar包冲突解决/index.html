@@ -58,7 +58,7 @@
 <meta property="og:image" content="https://muyed.work/elasticsearch-rest-client-6-3-2%E7%89%88%E6%9C%ACjar%E5%8C%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/error.png">
 <meta property="og:image" content="https://muyed.work/elasticsearch-rest-client-6-3-2%E7%89%88%E6%9C%ACjar%E5%8C%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/maven-tree.png">
 <meta property="article:published_time" content="2019-12-28T22:34:29.000Z">
-<meta property="article:modified_time" content="2019-12-29T12:48:22.727Z">
+<meta property="article:modified_time" content="2019-12-29T14:10:30.549Z">
 <meta property="article:author" content="沐也">
 <meta property="article:tag" content="elasticsearch">
 <meta property="article:tag" content="java">
@@ -254,7 +254,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-29 12:48:22" itemprop="dateModified" datetime="2019-12-29T12:48:22+00:00">2019-12-29</time>
+                <time title="修改时间：2019-12-29 14:10:30" itemprop="dateModified" datetime="2019-12-29T14:10:30+00:00">2019-12-29</time>
               </span>
 
           
@@ -288,7 +288,7 @@
 <p>对es操作时出现异常：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.NoSuchMethodError: org.elasticsearch.client.Request.&lt;init&gt;(Ljava/lang/String;Ljava/lang/String;)V</span><br></pre></td></tr></table></figure>
 
-<h3 id="问题定位及分析"><a href="#问题定位及分析" class="headerlink" title="问题定位及分析"></a>问题定位及分析</h3><p>通常出现<code>java.lang.NoSuchMethodError</code> 异常说明项目中出现了jar包冲突，项目运行时调用了版本A中的某个类的方法，但实际上classLoader加载的是版本B的类文件，而版本B中并没有实际调用的方法签名，导致异常出现。</p>
+<h3 id="问题定位及分析"><a href="#问题定位及分析" class="headerlink" title="问题定位及分析"></a>问题定位及分析</h3><p>通常出现<code>java.lang.NoSuchMethodError</code> 异常说明项目中出现了jar包冲突，项目运行时调用了版本A中的某个类的方法, 但实际上classLoader加载的是版本B的类文件，而版本B中并没有实际调用的方法签名，导致异常出现。</p>
 <p>从爆出的异常可以知道是<code>org.elasticsearch.client.Reques</code>这个类出现了冲突 ,通过用idea全局查找该类发了了有如下两个类全名完全相同的类存在于<code>elasticsearch-rest-client:6.4.3</code>和<code>elasticsearch-rest-high-level-client:6.3.2</code>这两个不同的jar包内</p>
 <img src="/elasticsearch-rest-client-6-3-2%E7%89%88%E6%9C%ACjar%E5%8C%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/error.png" class="">
 
