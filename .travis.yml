@@ -13,6 +13,12 @@ install:
 script:
   - hexo clean
   - hexo g -d
+after_script:
+  - cd ./public
+  - git init
+  - git add .
+  - git commit -m 'travis'
+  - git push --force --quiet "https://dt_ktQOhtD:$CO_TOKEN@git.coding.net/b_fatty/hexo.git" master:master
 
 deploy:
   - provider: pages
@@ -24,13 +30,3 @@ deploy:
     local-dir: public
     target-branch:
       master
-  - provider: script
-    script:
-      - cd ./public
-      - rm -rf .git
-      - git init
-      - git add .
-      - git commit -m 'travis'
-      - git push --force --quiet "https://dt_ktQOhtD:$CO_TOKEN@git.coding.net/b_fatty/hexo.git" master:master
-    on:
-      branch: source
