@@ -18,7 +18,7 @@ after_script:
   - git init
   - git add .
   - git commit -m 'travis'
-  - git push --force --quiet "https://dt_ktQOhtD:$CO_TOKEN@git.coding.net/b_fatty/hexo.git" master:master
+  - git push --force --quiet "https://pt9xvfc5h8ip:$CO_TOKEN@e.coding.net/muyed/muyed.coding.me.git" master:master
 
 deploy:
   - provider: pages

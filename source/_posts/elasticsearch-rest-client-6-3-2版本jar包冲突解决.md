@@ -24,7 +24,7 @@ java.lang.NoSuchMethodError: org.elasticsearch.client.Request.<init>(Ljava/lang/
 
 ### 问题定位及分析
 
-通常出现`java.lang.NoSuchMethodError` 异常说明项目中出现了jar包冲突，项目运行时调用了版本A中的某个类的方法，但实际上classLoader加载的是版本B的类文件，而版本B中并没有实际调用的方法签名，导致异常出现。
+通常出现`java.lang.NoSuchMethodError` 异常说明项目中出现了jar包冲突，项目运行时调用了版本A中的某个类的方法, 但实际上classLoader加载的是版本B的类文件，而版本B中并没有实际调用的方法签名，导致异常出现。
 
 从爆出的异常可以知道是`org.elasticsearch.client.Reques`这个类出现了冲突 ,通过用idea全局查找该类发了了有如下两个类全名完全相同的类存在于`elasticsearch-rest-client:6.4.3`和`elasticsearch-rest-high-level-client:6.3.2`这两个不同的jar包内
 
