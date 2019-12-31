@@ -10,7 +10,6 @@ gulp.task('minify-css', function() {
     return gulp.src('./public/**/*.css')
         .pipe(minifycss())
         .pipe(gulp.dest('./public'));
-    done();
 });
 // 压缩 public 目录 html
 gulp.task('minify-html', function() {
@@ -23,7 +22,6 @@ gulp.task('minify-html', function() {
          minifyURLs: true,
     }))
     .pipe(gulp.dest('./public'));
-    done();
 });
 // 压缩 public/js 目录 js
 gulp.task('minify-js', function() {
@@ -33,7 +31,6 @@ gulp.task('minify-js', function() {
          }))
         .pipe(uglify())
         .pipe(gulp.dest('./public'));
-    done();
 });
 gulp.task('minify-images', function () {
     return gulp.src('./public/images/**/*.*')
@@ -49,7 +46,6 @@ gulp.task('minify-images', function () {
             })
         ]))
         .pipe(gulp.dest('./public/images'));
-    done();
 });
 // 执行 gulp 命令时执行的任务
-gulp.task('default', gulp.series('minify-html', 'minify-css', 'minify-js'));
+gulp.task('default', gulp.series('minify-html', 'minify-css', 'minify-js', 'minify-images'));
