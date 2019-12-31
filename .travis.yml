@@ -12,7 +12,7 @@ install:
 
 script:
   - hexo clean
-  - hexo g -d
+  - hexo g && gulp
 after_script:
   - cd ./public
   - git init
