@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://muyed.work/idea%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</loc>
+    <lastmod>2020-01-10</lastmod>
+  </url>  <url>
     <loc>https://muyed.work/elasticsearch-rest-client-6-3-2%E7%89%88%E6%9C%ACjar%E5%8C%85%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2020-01-10</lastmod>
   </url>
