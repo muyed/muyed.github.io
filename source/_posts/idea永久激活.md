@@ -10,7 +10,7 @@ tags: java idea
 
 ##### 2.在idea中修改idea. vmoptions
 
-点击 `Heap -> Edit Custom Vm options`，在idea. vmoptions文件中添加 `{userpath}/jetbrains-agent.jar`，修改完成后需要重启idea
+点击 `Heap -> Edit Custom Vm options`，在idea. vmoptions文件中添加 `-javaagent:{userpath}/jetbrains-agent.jar`，修改完成后需要重启idea
 
 {% asset_img vmoptions.png  %}
 
