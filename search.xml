@@ -5,7 +5,7 @@
     <url>/idea%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/</url>
     <content><![CDATA[<h5 id="1-下载激活依赖包"><a href="#1-下载激活依赖包" class="headerlink" title="1.下载激活依赖包"></a>1.下载激活依赖包</h5><a href="/idea%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/jetbrains-agent.jar" title="jetbrains-agent.jar">jetbrains-agent.jar</a>
 
-<h5 id="2-在idea中修改idea-vmoptions"><a href="#2-在idea中修改idea-vmoptions" class="headerlink" title="2.在idea中修改idea. vmoptions"></a>2.在idea中修改idea. vmoptions</h5><p>点击 <code>Heap -&gt; Edit Custom Vm options</code>，在idea. vmoptions文件中添加 <code>{userpath}/jetbrains-agent.jar</code>，修改完成后需要重启idea</p>
+<h5 id="2-在idea中修改idea-vmoptions"><a href="#2-在idea中修改idea-vmoptions" class="headerlink" title="2.在idea中修改idea. vmoptions"></a>2.在idea中修改idea. vmoptions</h5><p>点击 <code>Heap -&gt; Edit Custom Vm options</code>，在idea. vmoptions文件中添加 <code>-javaagent:{userpath}/jetbrains-agent.jar</code>，修改完成后需要重启idea</p>
 <img src="/idea%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/vmoptions.png" class="">
 
 <p><strong>注意：</strong> <code>{userpath}</code>替换成你下载下来的<code>jetbrains-agent.jar</code>的存放路径</p>
